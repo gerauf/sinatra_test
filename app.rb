@@ -25,10 +25,10 @@ get '/secret5' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red'>
-  <h5>shhh..... Emilio do your homework</h5>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
+  @action = ["do", "eat", "walk", "stroke", "lick"].sample
+  @pronoun = ["my", "your", "our", "their"].sample
+  @noun = ["homework", "cheese", "exercises", "melons"].sample
+  erb :index
 end
 
 get '/cat/dog' do
